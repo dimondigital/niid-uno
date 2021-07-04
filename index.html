@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIID UNO</title>
+
+  <link rel="stylesheet" href="bower_components/reset-css/reset.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/starter-style.css">
+  <link rel="stylesheet" href="css/main-style.css">
+  <link rel="stylesheet" href="src/fonts/stylesheet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="src/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="src/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="src/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="src/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="src/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="src/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="src/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="src/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="src/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+  <link rel="manifest" href="src/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="scripts/casePopup.js"></script>
+
+  <style>
+    #page-preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #030303;
+      z-index: 996;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #page-preloader .spinner {
+      display: inline-block;
+      line-height: 100vh;
+      margin-left: 50px;
+      margin-top: 45vh;
+      z-index: 997;
+      width: 100px;
+      height: 100px;
+      background: url('src/preloader.gif') no-repeat 99% 50%;
+    }
+  </style>
+</head>
+<body>
+<!-- preloader -->
+<div id="page-preloader"><span class="spinner"></span></div>
+<!-- case-popup -->
+<div class="case-popup col-xs-12 no-padding animated fadeIn" id="casePopup" hidden>
+  <div class="case-popup-content col-xs-8">
+    <div class="inner">
+      <a class="popup-close" onclick="hidePopup('#casePopup')" href="javascript:void(0)">X</a>
+      <form id="call-form" class="callbackform" method="post">
+        <input type="hidden" name="act" value="callback" hidden>
+        <h3>Заказ на отправку</h3>
+        <h3 class="green">Рюкзак-органайзер "NIID UNO"</h3>
+        <h3 class="green">+ PowerBank Xiaomi на 20 000 Ah</h3>
+        <h2 class="cross-line">цена 3599 рублей 00 копеек</h2>
+        <h2>цена 2845 рублей 00 копеек</h2>
+        <br>
+        <h3>Оставьте свои данные, чтобы могли связаться с вами и уточнить все необходимые детали для успешной отправки
+          товара.</h3>
+        <input class="col-xs-12 col-sm-6" id="name" name="name" required="required" placeholder="Имя">
+        <input class="col-xs-12 col-sm-6" id="tel" type="tel" name="tel" required="required" placeholder="телефон">
+        <input class="col-xs-12 col-sm-6" id="e-mail" type="e-mail" name="e-mail" required="required"
+               placeholder="e-mail">
+        <input class="col-xs-12 col-sm-6 special-button form-close font-size-small" type="submit"
+               value="Оставить заявку"/>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="thanks-popup animated fadeIn" id="thanksPopup" hidden>
+  <div class="inner col-xs-12 col-sm-8 col-md-6">
+    <h3>Спасибо за вашу заявку !</h3>
+    <h3>Мы свяжемся с вами в ближайшее время</h3>
+  </div>
+</div>
+<!--! SIDE MENU !-->
+<div class="side-menu col-xs-4 col-md-3 col-lg-2">
+  <a href="tel:18475555555"><p class="phone">+18475555555</p></a>
+  <div class="btn-buy" onclick="showPopup('#casePopup')"><a href="javascript:void(0)">заказать</a></div>
+  <div class="backpack backpack-black">
+    <img class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8" src="src/black-001.jpg" alt="">
+  </div>
+  <div class="backpack backpack-grey">
+    <img class="col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8" src="src/grey-002.jpg" alt="">
+  </div>
+  <p class="price-head col-md-offset-2 col-md-8  col-xs-offset-2 col-xs-8">цена</p>
+  <p class="price cross-line col-md-12 col-xs-12">3599 p.</p>
+  <p class="price col-md-12 col-xs-12">2845 p.</p>
+  <p class="gift  col-md-offset-2 col-md-8 col-xs-8">+ PowerBank на 20.000 Ah в подарок</p>
+</div>
+
+<!--! SECTION 1 !-->
+<div class="section-1 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">рюкзак-органайзер</p>
+  </div>
+  <div class="bg"><img src="src/bg-1.jpg" alt=""></div>
+  <div class="man col-xs-12 col-md-6">
+    <img src="src/man-with-grey.png" alt="">
+  </div>
+  <div class="desc col-xs-12 col-md-6">
+    <div class="desc-text col-xs-6 col-md-8">
+      <p>тонкий. объёмный.</p>
+      <p>прочный полиэфир.</p>
+    </div>
+    <div class="icon col-xs-4 col-md-4">
+      <img src="src/icons-01.png" alt="">
+    </div>
+    <div class="desc-text col-xs-6 col-md-8">
+      <p>жёсткие ручки. система антивор</p>
+    </div>
+    <div class="icon col-xs-4 col-md-4">
+      <img src="src/icons-02.png" alt="">
+    </div>
+    <div class="desc-text col-xs-6 col-md-8">
+      <p>не боится воды</p>
+    </div>
+    <div class="icon col-xs-4 col-md-4">
+      <img src="src/icons-03.png" alt="">
+    </div>
+    <div class="desc-text col-xs-6 col-md-8">
+      <p>нейтральные цвета, </p>
+      <p>совместимые с любой одеждой</p>
+    </div>
+    <div class="icon col-xs-4 col-md-4">
+      <img src="src/icons-04.png" alt="">
+    </div>
+    <div class="desc-text col-xs-6 col-md-8">
+      <p>5 скрытых карманов под рукой</p>
+    </div>
+    <div class="icon col-xs-4 col-md-4">
+      <img src="src/icons-05.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section-2 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">твой идеальный помощник</p>
+  </div>
+  <div class="backpack-animation col-xs-12 col-md-6">
+    <img src="src/basic-animation.jpg" alt="">
+  </div>
+  <div class="content col-md-6">
+    <p>Дизайн этого многофункционального и полезного рюкзака продиктован исключительно практичностью и удобством.
+      Прочная
+      полиэфирная ткань отлично защищает от дождя и снега. Материал с небольшой толщиной имеет высокую прочность,
+      способную выдержать большой набор твоих вещей - от визитной карточки до габаритного ноутбука.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section-3 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">видеообзоры</p>
+  </div>
+  <div class="video col-xs-12 col-md-6">
+    <iframe src="https://www.youtube.com/embed/rq1czfhm_hs?ecver=1" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+  </div>
+  <div class="video col-xs-12 col-md-6">
+    <iframe src="https://www.youtube.com/embed/fc7Lb2Er2sg?ecver=1" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+  </div>
+  <div class="video col-xs-12 col-md-6">
+    <iframe src="https://www.youtube.com/embed/u8FIcII1anM?ecver=1" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+  </div>
+  <div class="video col-xs-12 col-md-6">
+    <iframe src="https://www.youtube.com/embed/YGlMItz2erE?ecver=1" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section-4 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="bg"><img src="src/bg-2.jpg" alt=""></div>
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">задаёт новые стандарты надёжности и удобства</p>
+  </div>
+  <div class="images col-md-6">
+    <img src="src/backpack-details.png" alt="">
+  </div>
+  <div class="content col-md-6">
+    <p>Родившись, благодаря поддержке большого сообщества, компания NIID в лице её основателей
+      (Харрис Хейни, Джейсон Ли, Винсон Сих) задались целью помочь деловым профессионалам и
+      создали такой рюкзак, который с одинаковым успехом имеет как современный стиль так и,
+      используя современные технологии, не уступает в функциональности и прочности.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section-5 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="bg"><img src="src/bg-3.png" alt=""></div>
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">оставляет приятные впечатления</p>
+  </div>
+  <div class="review col-xs-12 col-md-12 col-lg-offset-3 col-lg-6">
+    <div class="ava col-xs-3 col-md-2 no-padding">
+      <img src="src/ava-01.jpg" alt="">
+    </div>
+    <a class="link col-xs-7 col-md-4" target="_blank" href="https://vk.com/id291223064"><p>vk.com/id291223064</p></a>
+    <p class="name col-xs-7 col-md-3">Владимир Начиков</p>
+    <p class="review-body col-xs-7 col-md-7">Рюкзак оказался достаточно прочным. Ношу в нём ноутбук и документацию,
+      которая
+      точно не промокнет в случае дождя.
+    </p>
+
+  </div>
+  <div class="review col-xs-12 col-md-12 col-lg-offset-3 col-lg-6">
+    <div class="ava col-xs-3 col-md-2 no-padding">
+      <img src="src/ava-02.jpg" alt="">
+    </div>
+    <a class="link col-xs-7 col-md-4" target="_blank" href="https://vk.com/abondarev91"><p>vk.com/abondarev91</p></a>
+    <p class="name col-xs-7 col-md-3">Александр Бондарев</p>
+    <p class="review-body col-xs-7 col-md-7">Классный рюкзак - не придраться. Сколько бы не положил в него вещей - всё
+      равно
+      носить очень удобно. Также много интересных продуманных деталей, которые упрощают жизнь.
+    </p>
+
+  </div>
+  <div class="review col-xs-12 col-md-12 col-lg-offset-3 col-lg-6">
+    <div class="ava col-xs-3 col-md-2 no-padding">
+      <img src="src/ava-03.jpg" alt="">
+    </div>
+    <a class="link col-xs-7 col-md-4" target="_blank" href="https://vk.com/elionsea"><p>vk.com/elionsea</p></a>
+    <p class="name col-xs-7 col-md-3">Дмитрий Николаев</p>
+    <p class="review-body col-xs-7 col-md-7">Очень понравился дизайн и крепкость материалов.
+      Молнии работают хорошо и без напряжения. Хороший рюкзак.
+    </p>
+
+  </div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section-6 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="bg"></div>
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">надёжно доставляется</p>
+  </div>
+  <h3>Гарантия 12 месяцев.</h3>
+  <h3>Возврат возможен в течении первых 14 дней после покупки.</h3>
+  <h3>Доставка производится : по всей России, курьером по Москве, самовывоз.</h3>
+  <h3>Без предоплаты. Оплата только после получения.</h3>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section-7 col-xs-offset-4 col-xs-8 col-md-offset-3 col-md-9 col-lg-offset-2 col-lg-10 no-padding">
+  <div class="bg"></div>
+  <div class="logo-container col-xs-12">
+    <p class="logo">NIID UNO</p>
+    <p class="headline">супер энергичный</p>
+  </div>
+  <h3>Вместе с рюкзаком вы получаете</h3>
+  <h3>PowerBank на 20.000 Ah</h3>
+  <h3>в подарок </h3>
+  <div class="power col-md-12">
+    <img src="src/powerbank.jpg" alt="">
+  </div>
+  <!-- <div class="col-lg-12"> -->
+  <a onclick="showPopup('#casePopup')" href="javascript:void(0)">
+    <div class="btn-buy">
+      заказать NIID UNO
+    </div>
+  </a>
+  <!-- </div> -->
+
+</div>
+
+<!-- Yandex.Metrika counter -->
+<!--	<script type="text/javascript" > -->
+<!--	(function (d, w, c) { -->
+<!--	(w[c] = w[c] || []).push(function() { -->
+<!--	try { -->
+<!--	w.yaCounter50749171 = new Ya.Metrika2({ -->
+<!--	id:50749171, -->
+<!--	clickmap:true, -->
+<!--	trackLinks:true, -->
+<!--	accurateTrackBounce:true -->
+<!--	}); -->
+<!--	} catch(e) { } -->
+<!--	}); -->
+
+<!--	var n = d.getElementsByTagName("script")[0], -->
+<!--	s = d.createElement("script"), -->
+<!--	f = function () { n.parentNode.insertBefore(s, n); }; -->
+<!--	s.type = "text/javascript"; -->
+<!--	s.async = true; -->
+<!--	s.src = "https://mc.yandex.ru/metrika/tag.js"; -->
+
+<!--	if (w.opera == "[object Opera]") { -->
+<!--	d.addEventListener("DOMContentLoaded", f, false); -->
+<!--	} else { f(); } -->
+<!--	})(document, window, "yandex_metrika_callbacks2"); -->
+<!--	</script> -->
+<!--	<noscript><div><img src="https://mc.yandex.ru/watch/50749171" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

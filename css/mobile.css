@@ -1,0 +1,111 @@
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .price-head {
+    font-size: 20px; }
+  .price {
+    font-size: 20px; }
+  .gift {
+    font-size: 15px; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .logo {
+    font-size: 8vw; }
+  .phone {
+    font-size: 20px; }
+  .section-1 .desc {
+    background-color: black;
+    margin-bottom: 30px; }
+    .section-1 .desc p {
+      font-size: 3vw;
+      line-height: 1.2em;
+      text-align: justify; }
+    .section-1 .desc img {
+      width: 250%; }
+  .video {
+    padding: 30px; }
+  .section-2 .content {
+    font-size: 2.2vw;
+    text-align: justify; }
+  .section-4 .images {
+    padding-bottom: 0px; }
+  .section-4 .content {
+    font-size: 2.2vw;
+    text-align: justify;
+    font-weight: 300;
+    margin-bottom: 30px; }
+  .section-5 .review {
+    margin: 0px; }
+    .section-5 .review .link {
+      font-size: 0.7em;
+      padding: 16px;
+      text-align: left; }
+    .section-5 .review .review-body {
+      font-size: 1.1em;
+      padding-left: 0;
+      margin: 0;
+      margin-top: 20px;
+      width: 100%;
+      text-align: justify; }
+    .section-5 .review .name {
+      margin-left: 35px; }
+  .section-7 .btn-buy {
+    font-size: 4vw; }
+  .section-7 .power img {
+    width: 100%; }
+  .btn-buy {
+    margin-top: 20px;
+    font-size: 1em;
+    background-color: #3cbe3e;
+    padding: 5px 10px; }
+    .btn-buy:hover {
+      cursor: pointer; }
+  .case-popup-content {
+    padding: 20px;
+    height: 100vh; }
+    .case-popup-content input {
+      font-size: 2em;
+      padding: 5px;
+      margin: 0; }
+    .case-popup-content .popup-close {
+      font-size: 2.5em; }
+  .price-head {
+    font-size: 15px; }
+  .price {
+    font-size: 15px;
+    margin-top: 0; }
+  .gift {
+    font-size: 10px;
+    margin-top: 0px;
+    text-align: left; }
+  .man img {
+    width: 100%; }
+  .inner {
+    margin: 0; }
+    .inner h3 {
+      font-size: 1.2em;
+      margin-top: 0; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .phone {
+    font-size: 1em; }
+  .section-3 .video {
+    padding: 0; }
+  .section-1 .desc {
+    background-color: black;
+    margin-bottom: 30px; }
+    .section-1 .desc p {
+      text-align: justify; }
+    .section-1 .desc img {
+      width: 150%; }
+    .section-1 .desc .icon {
+      margin-right: 0px; } }
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */

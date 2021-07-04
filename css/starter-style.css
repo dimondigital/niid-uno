@@ -1,0 +1,52 @@
+html, body, section, .container, div, p, a, img {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: white; }
+
+section {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  height: auto;
+  clear: both; }
+  section .container {
+    max-width: 1024px;
+    height: auto;
+    position: relative;
+    clear: both;
+    margin: 0 auto; }
+
+div {
+  display: inline-block; }
+
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover, a:focus, a:visited {
+    color: white;
+    text-decoration: none; }
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.float-right {
+  float: right !important; }
+
+.float-left {
+  float: left !important; }
+
+.text-align-left {
+  text-align: left; }
+
+.text-align-right {
+  text-align: right; }
+
+.text-align-center {
+  text-align: center; }
+
+.no-padding {
+  padding: 0 !important; }

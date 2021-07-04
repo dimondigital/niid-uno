@@ -1,0 +1,424 @@
+body, section, div {
+  margin: 0;
+  padding: 0;
+  font-family: 'Russo One';
+}
+
+div {
+  display: inline-block;
+}
+
+.side-menu {
+  position: fixed;
+  background-color: black;
+  height: 100vh;
+  text-align: center;
+  z-index: 970;
+  padding: 0;
+}
+
+.phone {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.backpack img {
+  text-align: center;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.backpack:hover {
+  cursor: pointer;
+}
+
+.choosed {
+  border: 7px solid #3cbe3e;
+}
+
+.btn-buy {
+  margin-top: 20px;
+  font-size: 1.7em;
+  background-color: #3cbe3e;
+  padding: 10px 30px;
+}
+
+.btn-buy:hover {
+  cursor: pointer;
+}
+
+.logo-container {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 20px;
+  font-family: 'AA Akashi';
+  font-size: 4vw;
+}
+
+.headline {
+  margin-top: 0px;
+  margin-bottom: 25px;
+  font-family: 'Russo One';
+  font-size: 25px;
+}
+
+.price-head {
+  margin-top: 20px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.price {
+  text-align: center;
+  /* margin-top: 20px; */
+  /* letter-spacing: 2px; */
+  font-size: 2em;
+}
+
+.gift {
+  margin-top: 20px;
+  /*font-size: 20px;*/
+  color: #3cbe3e;
+}
+
+.section-1 {
+  overflow: hidden;
+  z-index: 99;
+}
+
+.section-1 .logo-container {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  z-index: 780;
+}
+
+.section-1 .logo-container .headline {
+  margin-top: 0px;
+  margin-bottom: 25px;
+  font-family: 'Russo One';
+  font-size: 25px;
+}
+
+.section-1 .bg img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.section-1 img {
+  padding: 0;
+  display: block;
+  margin: 0;
+}
+
+.section-1 .man {
+  z-index: 100;
+  top: -20%;
+  left: -15%;
+}
+
+.section-1 .desc {
+  text-align: right;
+  z-index: 500;
+}
+
+.section-1 .desc .icon {
+  width: 60px;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+.section-1 .desc .desc-text {
+  margin-top: 60px;
+  margin-right: 20px;
+  line-height: 30px;
+  height: 30px;
+  vertical-align: middle;
+  font-size: 20px;
+  text-align: right;
+}
+
+.section-2 {
+  background-color: white;
+  color: #666666;
+  margin-bottom: 100px;
+}
+
+.section-2 .logo-container {
+  background-color: white;
+  color: #3cbe3e;
+  text-align: center;
+}
+
+.section-2 .backpack-animation img {
+  width: 100%;
+}
+
+.section-2 .content {
+  margin-top: 20px;
+  font-size: 1.5vw;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.section-3 {
+  background-color: white;
+  color: black;
+  margin-bottom: 100px;
+}
+
+.section-3 .logo-container {
+  background-color: white;
+  text-align: center;
+  color: #3cbe3e;
+}
+
+.section-3 .video {
+  padding: 60px;
+}
+
+.section-3 .video iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.section-4 {
+  overflow: hidden;
+  align-content: center;
+  background-color: black;
+  color: white;
+}
+
+.section-4 .bg {
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.section-4 .logo-container {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.section-4 .images {
+  padding-bottom: 80px;
+}
+
+.section-4 .images img {
+  padding: 30px;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.section-4 .content {
+  margin-top: 20px;
+  font-size: 1.5vw;
+  padding: 20px;
+}
+
+.section-5 {
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+.section-5 .bg img {
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+}
+
+.section-5 .logo-container {
+  background-color: rgba(0, 0, 0, 0);
+  color: #3cbe3e;
+}
+
+.section-5 .review {
+  display: inline-block;
+  background-color: white;
+  z-index: 800;
+  padding: 20px;
+}
+
+.section-5 .review .name {
+  display: inline-block;
+  font-size: 20px;
+  color: #3cbe3e;
+  margin-left: 30px;
+}
+
+.section-5 .review .ava {
+  float: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 250px;
+}
+
+.section-5 .review .review-body {
+  color: #666666;
+  margin: 20px;
+  display: inline-block;
+  font-size: 1.2vw;
+  font-style: italic;
+}
+
+.section-5 .review .link {
+  float: right;
+  display: block;
+  font-family: 'AA Akashi';
+  text-decoration: underline;
+  color: #3cbe3e;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.section-6 {
+  background-image: url("../src/bg-3.jpg");
+  background-position: 30% bottom;
+  bottom: 0;
+  overflow: hidden;
+  color: #3cbe3e;
+  padding-bottom: 120px;
+}
+
+.section-6 .logo-container {
+  background-color: rgba(0, 0, 0, 0);
+  color: #3cbe3e;
+}
+
+.section-6 h3 {
+  width: 100%;
+  display: inline-block;
+  padding: 40px;
+  font-size: 25px;
+}
+
+.section-7 {
+  background-image: url("../src/bg-4.jpg");
+  background-position: 30% bottom;
+  bottom: 0;
+  overflow: hidden;
+  color: #3cbe3e;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-7 .logo-container {
+  background-color: rgba(0, 0, 0, 0);
+  color: #3cbe3e;
+}
+
+.section-7 h3 {
+  text-align: right;
+  padding-right: 50px;
+  color: white;
+  float: right;
+  width: 100%;
+  font-size: 25px;
+}
+
+.section-7 .power {
+  margin-left: 0px;
+  margin-bottom: 100px !important;
+}
+
+.section-7 .btn-buy {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 100px !important;
+}
+
+.case-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  z-index: 999;
+  color: white;
+  overflow: hidden;
+}
+
+.cross-line {
+  text-decoration: line-through !important;
+  color: #3cbe3e;
+}
+
+.case-popup-content {
+  color: white;
+  width: 100%;
+  background-color: black;
+  padding: 0 20px;
+  background-size: cover;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.case-popup-content input {
+  background-color: #fff;
+  color: black;
+  font-size: 2vw;
+  margin-top: 30px;
+  padding: 20px;
+  border: 4px solid #3cbe3e;
+}
+
+.case-popup-content .green {
+  color: #3cbe3e;
+}
+
+.case-popup-content .special-button {
+  background-color: #3cbe3e;
+}
+
+.inner {
+  margin: 40px;
+  margin-bottom: 70px;
+}
+
+.popup-close {
+  color: white;
+  font-size: 3vw;
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  z-index: 998;
+}
+
+.popup-close:hover {
+  color: #3cbe3e;
+}
+
+.thanks-popup {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  z-index: 10000;
+  color: white;
+  text-align: center;
+}
+
+.thanks-popup .inner {
+  margin: 0 auto;
+  display: inline-block;
+  color: white;
+  width: 100%;
+  background-color: #3cbe3e;
+  padding: 50px;
+  z-index: 999;
+  background-size: cover;
+}
